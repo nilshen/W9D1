@@ -4,13 +4,11 @@ const MovingObject = require("./moving_object");
 
 Util.inherits(Asteroid, MovingObject);
 
-function Asteroid(optionHash) {
-    // this.pos = optionHash.pos
-    // this.vel = Util.randomVec
-    // this.color = "red";
-    // this.radius = 50;
+function Asteroid(option) {
+    option.vel = Util.randomVec(100)
+    option.color = "red";
+    option.radius = 50;
+    MovingObject.call(this, option)
 }
-
-const ast = new Asteroid();
 
 module.exports = Asteroid;
