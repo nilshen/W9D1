@@ -1,15 +1,16 @@
-const Util = require("./utils")
+const Util = require("./utils");
 const MovingObject = require("./moving_object");
 
-console.log("This is the asteroid file")
 
 Util.inherits(Asteroid, MovingObject);
 
-function Asteroid () {
-
+function Asteroid(optionHash) {
+    // this.pos = optionHash.pos
+    // this.vel = Util.randomVec
+    // this.color = "red";
+    // this.radius = 50;
 }
 
 const ast = new Asteroid();
 
 module.exports = Asteroid;
-debugger
